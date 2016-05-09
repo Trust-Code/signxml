@@ -1,0 +1,68 @@
+
+<?xml version="1.0"?>
+<NFe xmlns="http://www.portalfiscal.inf.br/nfe"><infNFe versao="3.10" Id="NFe43160502261542000143550010000003391162550863"><ide><cUF>42</cUF><cNF>16255086</cNF><natOp>Venda Mercadoria</natOp><indPag>1</indPag><mod>55</mod><serie>1</serie><nNF>1</nNF><dhEmi>2016-05-05T11:28:14-03:00</dhEmi><dhSaiEnt>2016-05-05T11:28:14-03:00</dhSaiEnt><tpNF>1</tpNF><idDest>2</idDest><cMunFG>4321667</cMunFG><tpImp>1</tpImp><tpEmis>1</tpEmis><cDV>3</cDV><tpAmb>2</tpAmb><finNFe>1</finNFe><indFinal>0</indFinal><indPres>0</indPres><procEmi>0</procEmi><verProc>Odoo Brasil 9.0</verProc></ide><emit><CNPJ>02261542000143</CNPJ><xNome>False</xNome><xFant>Trustcode</xFant><enderEmit><xLgr>Donicia Maria da Costa</xLgr><nro>43</nro><xBairro>Saco Grande</xBairro><cMun>4321667</cMun><xMun>False</xMun><UF>SC</UF><CEP>88032050</CEP><cPais>1058</cPais><xPais>Brasil</xPais><fone>4898016226</fone></enderEmit><IE>3220014803</IE><CRT>3</CRT></emit><dest><CPF>06621204930</CPF><xNome>Danimar Ribeiro</xNome><enderDest><xLgr>Donicia Maria da Costa</xLgr><nro>83</nro><xBairro>Saco Grande</xBairro><cMun>4321667</cMun><xMun>Florian&#xF3;polis</xMun><UF>SC</UF><CEP>88032050</CEP><cPais>1058</cPais><xPais>Brasil</xPais></enderDest><indIEDest>9</indIEDest></dest><det nItem="1"><prod><cProd>22</cProd><cEAN>00000011111115</cEAN><xProd>Cacha&#xE7;a</xProd><NCM>39259090</NCM><CFOP>5101</CFOP><uCom>un</uCom><qCom>0.0</qCom><vUnCom>3.0</vUnCom><vProd>100.00</vProd><cEANTrib>00000011111115</cEANTrib><uTrib>un</uTrib><qTrib>0.0</qTrib><vUnTrib>3.0</vUnTrib><indTot>1</indTot></prod><imposto><vTotTrib>12.00</vTotTrib><ICMS><ICMS00><orig>0</orig><CST>00</CST><modBC>0</modBC><vBC>100.00</vBC><pICMS>12.00</pICMS><vICMS>12.00</vICMS></ICMS00></ICMS><IPI><cEnq>999</cEnq><IPITrib><CST>50</CST><vBC>100.00</vBC><pIPI>5.00</pIPI><vIPI>5.00</vIPI></IPITrib></IPI><PIS><PISAliq><CST>01</CST><vBC>100.00</vBC><pPIS>0.6500</pPIS><vPIS>0.65</vPIS></PISAliq></PIS><COFINS><COFINSAliq><CST>01</CST><vBC>100.00</vBC><pCOFINS>3.0000</pCOFINS><vCOFINS>3.00</vCOFINS></COFINSAliq></COFINS></imposto></det><total><ICMSTot><vBC>100.00</vBC><vICMS>12.00</vICMS><vICMSDeson>0.00</vICMSDeson><vBCST>0.00</vBCST><vST>0.00</vST><vProd>100.00</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>5.00</vIPI><vPIS>0.65</vPIS><vCOFINS>3.00</vCOFINS><vOutro>0.00</vOutro><vNF>100.00</vNF><vTotTrib>12.00</vTotTrib></ICMSTot></total><transp><modFrete>9</modFrete></transp><cobr><dup><nDup>339/1</nDup><dVenc>2016-06-02</dVenc><vDup>8611.76</vDup></dup></cobr><infAdic><infCpl>Agora vai</infCpl></infAdic></infNFe><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#NFe43160502261542000143550010000003391162550863">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>hqP0GFznFhovki/4I6yXjMmIQgk=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>W7SWPk+5Djnu8mGKkY84o/eFQPiQX0xYQXO3Zkok77LOL748DaY4qjhfFF6HE/+r
+1De/jt2lyFkNebLxc5S5B8vUkQP0+BNFS4nlTBtxWsA2uNb/M+Th0l0EggAT4P6g
+nW2sOZuZDZ+Psdy4D2OzN+fkK5p85Lfz+13yTGgj4WluJwW64iufnk6qZUGzQmPG
+YpkpF+J1e0aiDkarXPdP+pCZp6cdgAepVLyiLM7bmMcfFTCmRTfVUF4zfmG6czfJ
+Ur0oWJGiAnseJ/piz/YvogZpaxAVmInJxJgnQNUo4DTBzjBQhbG0ys/yQ6lQySw0
+Fo19+OAPxZ45Q3a84BdiYw==</SignatureValue>
+<KeyInfo>
+<X509Data>
+<X509Certificate>MIIHtjCCBZ6gAwIBAgIIJUkVEBNUuIAwDQYJKoZIhvcNAQELBQAwgYkxCzAJBgNV
+BAYTAkJSMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMTQwMgYDVQQLEytBdXRvcmlkYWRl
+IENlcnRpZmljYWRvcmEgUmFpeiBCcmFzaWxlaXJhIHYyMRIwEAYDVQQLEwlBQyBT
+T0xVVEkxGzAZBgNVBAMTEkFDIFNPTFVUSSBNdWx0aXBsYTAeFw0xNTEwMTMxNzI2
+NTRaFw0xNjEwMTIxNzI2NTRaMIHYMQswCQYDVQQGEwJCUjETMBEGA1UEChMKSUNQ
+LUJyYXNpbDE0MDIGA1UECxMrQXV0b3JpZGFkZSBDZXJ0aWZpY2Fkb3JhIFJhaXog
+QnJhc2lsZWlyYSB2MjESMBAGA1UECxMJQUMgU09MVVRJMRswGQYDVQQLExJBQyBT
+T0xVVEkgTXVsdGlwbGExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMTEwLwYD
+VQQDEyhJU09DT01QT1NJVE9TIEVJUkVMSSAtIE1FOjAyMjYxNTQyMDAwMTQzMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAha1rSd6c2f/wUVkPPTYq9W0z
+KKFUFnzBMSKCsa1Z5GMeANPhNsOT8PhJAe4UYWfMP6eMym9wTpytOiLmpghCAoRJ
+6mPulzBVuGIUalkCrn3tqTXOs2cNqqO9SCsn1IdPfONJudMHnViaUBugD3TUgMtW
+YzsPCCrC+hSMFA81ERAzHkgKaAWxnj6GFu1PVtZskXzEFiXp64VRciLJnhepxXl/
+8umLI81jtm0M57A1vHijirSlLtMAov6G+BimvEtHzWf9bE3TRkvtBZ7nAsUTmhZP
+vjmyziTY59i0Gj5AKG+KhgSL7boSLKeNYPFYb/ZguDGui4zPVQ3ZZay8fQdpvwID
+AQABo4ICzzCCAsswVAYIKwYBBQUHAQEESDBGMEQGCCsGAQUFBzAChjhodHRwOi8v
+Y2NkLmFjc29sdXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRpcGxhLXYxLnA3
+YjAdBgNVHQ4EFgQUIcYsHojBFf6srDFmTassi+Tak5gwCQYDVR0TBAIwADAfBgNV
+HSMEGDAWgBQ1rjEU9l7Sek9Y/jSoGmeXCsSbBzBeBgNVHSAEVzBVMFMGBmBMAQIB
+JjBJMEcGCCsGAQUFBwIBFjtodHRwczovL2NjZC5hY3NvbHV0aS5jb20uYnIvZG9j
+cy9kcGMtYWMtc29sdXRpLW11bHRpcGxhLnBkZjCB3gYDVR0fBIHWMIHTMD6gPKA6
+hjhodHRwOi8vY2NkLmFjc29sdXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRp
+cGxhLXYxLmNybDA/oD2gO4Y5aHR0cDovL2NjZDIuYWNzb2x1dGkuY29tLmJyL2xj
+ci9hYy1zb2x1dGktbXVsdGlwbGEtdjEuY3JsMFCgTqBMhkpodHRwOi8vcmVwb3Np
+dG9yaW8uaWNwYnJhc2lsLmdvdi5ici9sY3IvQUNTT0xVVEkvYWMtc29sdXRpLW11
+bHRpcGxhLXYxLmNybDAOBgNVHQ8BAf8EBAMCBeAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwIGCCsGAQUFBwMEMIG3BgNVHREEga8wgayBHXZpcmdpbmlhQGZybGFzc2Vzc29y
+aWEuY29tLmJyoB0GBWBMAQMCoBQTEkFOQSBMVUNJQSBBTEJFUlRPTqAZBgVgTAED
+A6AQEw4wMjI2MTU0MjAwMDE0M6A4BgVgTAEDBKAvEy0wMTEyMTk2NTUyNjM4NzU4
+OTQ5MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDCgFwYFYEwBAwegDhMMMDAwMDAw
+MDAwMDAwMA0GCSqGSIb3DQEBCwUAA4ICAQAardtGsUfnSrkOYEjFfFBBTvBt3DJE
+MN9bYcR1iwPPbsCqHhPwvCDHqXyohz0gol6jpNJXwObAWfMkWaANezBjA4Qfbyus
+8oJRIagxDnhOw8D/pZBgQvfKioFQAjnkSZBblIHWhlgjgNS5dz9N3SsZ4TaRXftR
+tSb9ipZBx/87LYOPV9tkeKsjZZr3lUdyK2gpgpHNQDaECKzoX+fCpVeudtw0XK3Y
+nYJvdQIBpE6C67bA/hGbmR+mo+Hjp5jzRgrOINvIiVrF7wM61QTYUIqu9e2/1frG
+lcJIp8Abpb0IfW5YOS+fJxdsC7LpsDEoAP39fEgc44ScUJzduTT199kJxTZCQ1V5
+hjM3Y+31+FDywOzdle5W68ZOeakpUf9Bvzvffe/qmWIGqKTiucP3feOAuWWisP+2
+vCyWa+u12Qlp+Pn5B/7iV+CkWJbr9J+6RAeWctAPG4Fu1xeGNDwwoXIAZX34VCCT
+LWGBsNyTRj9pLTkdFuX3wkrCZMaolMR8opQnabl3AX0HFfk7r+xA1LqJn62DeMr/
+BCxNklvwQpoXWV58kspWe6dX8Ks1Rdk+4k62TcupxEPIzQHe3ENkzkeFmY/o2hT1
+C3UtSXFWeJYb82StKjB1umzeBZLtGzfPFMSy5s1vx0J8KIA/PbTiTa2gvDxIz7sC
+IiKO96poAXlrwQ==</X509Certificate>
+</X509Data>
+</KeyInfo>
+</Signature></NFe>
