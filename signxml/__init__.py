@@ -235,11 +235,23 @@ class xmldsig(object):
         self.sig_root = Element(ds_tag("Signature"), nsmap=self.namespaces)
         if method == methods.enveloped:
             if isinstance(self.data, (str, bytes)):
-                raise InvalidInput("When using enveloped signature, **data** must be an XML element")
+                raise InvalidInput(
+                    "When using enveloped signature, **data** must be an XML element")
 
-            signature_placeholders = self._findall(self.data, "Signature[@Id='placeholder']", anywhere=True)
+            signature_placeholders = self._findall(
+                self.data, "Signature[@Id='placeholder']", anywhere=True)
 
-            c14n_payload = fromstring(etree.tostring(self.payload))
+            payload_to_sign = self.payload
+            if self._reference_uri:
+                payload_to_sign = self.data.find(
+                    ".//*[@Id='{}']".format(
+                        self._reference_uri.replace('#', '')))
+
+            if not payload_to_sign:
+                raise InvalidInput(
+                    "Reference URI could not be located in the document")
+
+            c14n_payload = fromstring(etree.tostring(payload_to_sign))
             if len(signature_placeholders) == 0:
                 self.payload.append(self.sig_root)
             elif len(signature_placeholders) == 1:
