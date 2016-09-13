@@ -248,7 +248,7 @@ class XMLSigner(XMLSignatureProcessor):
         self.namespaces = dict(ds=namespaces.ds)
         self._parser = None
 
-    def sign(self, data, key=None, passphrase=None, cert=None, reference_uri=None, key_name=None):
+    def sign(self, data, key=None, passphrase=None, cert=None, reference_uri=None, reference_only=False, key_name=None):
         """
         Sign the data and return the root element of the resulting XML tree.
 
@@ -274,6 +274,9 @@ class XMLSigner(XMLSignatureProcessor):
         :param reference_uri:
             Custom reference URI to incorporate into the signature. Only used when ``method`` is set to ``detached``.
         :type reference_uri: string
+        :param reference_only:
+            Whether to only sign the reference element. Only used when ``reference_uri`` is not None.
+        :type reference_only: boolean
         :param key_name: Add a KeyName element in the KeyInfo element that may be used by the signer to communicate a
             key identifier to the recipient. Typically, KeyName contains an identifier related to the key pair used to
             sign the message.
@@ -292,7 +295,7 @@ class XMLSigner(XMLSignatureProcessor):
         else:
             cert_chain = cert
 
-        sig_root, doc_root, c14n_input, reference_uri = self._unpack(data, reference_uri)
+        sig_root, doc_root, c14n_input, reference_uri = self._unpack(data, reference_uri, reference_only)
         payload_c14n = self._c14n(c14n_input, algorithm=self.c14n_alg)
         digest = self._get_digest(payload_c14n, self._get_digest_method_by_tag(self.digest_alg))
         signed_info_element, signature_value_element = self._build_sig(sig_root, reference_uri, digest)
@@ -357,7 +360,7 @@ class XMLSigner(XMLSignatureProcessor):
             doc_root.append(c14n_input)
         return doc_root
 
-    def _unpack(self, data, reference_uri):
+    def _unpack(self, data, reference_uri, reference_only=False):
         sig_root = Element(ds_tag("Signature"), nsmap=self.namespaces)
         doc_root = sig_root
         if self.method == methods.enveloped:
@@ -365,6 +368,21 @@ class XMLSigner(XMLSignatureProcessor):
                 raise InvalidInput("When using enveloped signature, **data** must be an XML element")
             c14n_input = self.get_root(data)
             doc_root = self.get_root(data)
+            if reference_only:
+                if reference_uri is None:
+                    raise InvalidInput("Must provide reference_uri when using reference_only")
+                if reference_uri.startswith('#'):
+                    reference_uri = reference_uri[1:]
+                targets = doc_root.xpath('*[@Id="{0}"]'.format(reference_uri))
+                if not targets:
+                    targets = doc_root.xpath('*[@ID="{0}"]'.format(reference_uri))
+                if len(targets) == 1:
+                    c14n_input = self.get_root(targets[0])
+                elif len(targets) == 0:
+                    raise InvalidInput("No reference found and using reference_only")
+                else:
+                    raise InvalidInput("Multiple references found when using reference_only")
+
             signature_placeholders = self._findall(doc_root, "Signature[@Id='placeholder']", anywhere=True)
             if len(signature_placeholders) == 0:
                 doc_root.append(sig_root)
