@@ -373,9 +373,9 @@ class XMLSigner(XMLSignatureProcessor):
                     raise InvalidInput("Must provide reference_uri when using reference_only")
                 if reference_uri.startswith('#'):
                     reference_uri = reference_uri[1:]
-                targets = doc_root.xpath('*[@Id="{0}"]'.format(reference_uri))
+                targets = doc_root.xpath('//*[@Id="{0}"]'.format(reference_uri))
                 if not targets:
-                    targets = doc_root.xpath('*[@ID="{0}"]'.format(reference_uri))
+                    targets = doc_root.xpath('//*[@ID="{0}"]'.format(reference_uri))
                 if len(targets) == 1:
                     c14n_input = self.get_root(targets[0])
                 elif len(targets) == 0:
